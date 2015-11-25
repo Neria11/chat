@@ -62,7 +62,7 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 --
 
 INSERT INTO `usuarios` (`idUser`, `nombre`, `apellido`, `email`, `username`, `password`, `slogan`, `avatar`, `dateRegistered`, `numLogin`, `lastLogin`, `status`) VALUES
-(1, NULL, NULL, NULL, 'sabino', 'ba952731f97fb058035aa399b1cb3d5c', NULL, NULL, NULL, 1, 'November 25, 2015, 12:22 pm', 1);
+(1, NULL, NULL, NULL, 'sabino', 'aba952731f97fb058035aa399b1cb3d5cc', NULL, NULL, NULL, 1, 'November 25, 2015, 12:22 pm', 1);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
