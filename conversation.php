@@ -1,9 +1,5 @@
 <?php
-session_start();
-
-if(!$_SESSION["username"]) {
-    header("Location:index.php");
-}
+include("models/security/control_sesion.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -58,8 +54,10 @@ if(!$_SESSION["username"]) {
       <a href="dashboard.php" class="list-group-item ">
         <span class="glyphicon glyphicon-home"></span> Home
       </a>
-      <a href="profile.php" class="list-group-item active"><span class="glyphicon glyphicon-user"></span> Perfil</a>
-      <a href="friends.php" class="list-group-item "><span class="glyphicon glyphicon-th-large"></span> Amigos</a>
+      <a href="profile.php" class="list-group-item "><span class="glyphicon glyphicon-user"></span> Perfil</a>
+      <a href="friends.php" class="list-group-item"><span class="glyphicon glyphicon-th-large"></span> Amigos</a>
+      <a href="groups.php" class="list-group-item"><span class="glyphicon glyphicon-star"></span> Grupos</a>
+      <a href="conersation.php" class="list-group-item active"><span class="glyphicon glyphicon-comment"></span> Conversaciones</a>
       <a href="models/security/logout.php" class="list-group-item"><span class="glyphicon glyphicon-off"></span> Cerrar sesión</a>
     </div>
   </div>

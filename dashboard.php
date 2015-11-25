@@ -1,9 +1,5 @@
 <?php
-session_start();
-
-if(!$_SESSION["username"]) {
-  header("Location:index.php");
-}
+include("models/security/control_sesion.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -61,8 +57,8 @@ if(!$_SESSION["username"]) {
       </a>
       <a href="profile.php" class="list-group-item "><span class="glyphicon glyphicon-user"></span> Perfil</a>
       <a href="friends.php" class="list-group-item"><span class="glyphicon glyphicon-th-large"></span> Amigos</a>
-      <a href="friends.php" class="list-group-item"><span class="glyphicon glyphicon-th-large"></span> Grupos</a>
-      <a href="friends.php" class="list-group-item"><span class="glyphicon glyphicon-comment"></span> Conversasiones</a>
+      <a href="groups.php" class="list-group-item"><span class="glyphicon glyphicon-star"></span> Grupos</a>
+      <a href="conversation.php" class="list-group-item"><span class="glyphicon glyphicon-comment"></span> Conversasiones</a>
       <a href="models/security/logout.php" class="list-group-item "><span class="glyphicon glyphicon-off"></span> Cerrar sesión</a>
     </div>
   </div>
