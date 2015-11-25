@@ -17,6 +17,7 @@ var registerNewUser = function(){
 var updateProfile = function(){
 	$("#sendProfile").click(function(){
 		var formProfile = $("#formProfile").serialize();
+		alert(formProfile);
 		$.ajax({
 			type:"POST",
 			url:"models/save_profile.php",

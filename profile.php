@@ -75,7 +75,7 @@ include("models/security/control_sesion.php");
       <!-- Default panel contents -->
       <div class="panel-heading">Mi perfil</div>
       <div class="panel-body">
-       <form method="post" action="" name="formProfile">
+       <form method="post" action="" name="formProfile" id="formProfile">
         <div class="form-group">
           <label for="nombre">Nombre:</label>
           <input type="email" name="nombre" class="form-control " id="nombre" placeholder="">
@@ -85,8 +85,8 @@ include("models/security/control_sesion.php");
           <input type="text" name="apellido" class="form-control " id="apellido" placeholder="">
         </div>
         <div class="form-group">
-          <label for="nick">Nick:</label>
-          <input type="text" name="nick" class="form-control " id="nick" readonly="" value="<?php echo "$_SESSION[username]"?>">
+          <label for="username">Username:</label>
+          <input type="text" name="username" class="form-control " id="username" readonly="" value="<?php echo "$_SESSION[username]"?>">
         </div>
         <div class="form-group">
           <label for="email">Correo electrónico:</label>
