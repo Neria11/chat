@@ -26,7 +26,7 @@ if(count($_POST) > 0) {
 
 		if($final_status == 1){
 			//Verificamos si la contraseña es la que le corresponde al usuario
-			$user_password = "SELECT password FROM usuarios where username = '" . $username . "'";
+			$user_password = "SELECT * FROM usuarios where username = '" . $username . "'";
 			$is_password = mysql_query($user_password);
 			
 			while ($row = mysql_fetch_array($is_password)) {
