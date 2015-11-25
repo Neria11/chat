@@ -1,5 +1,5 @@
 <?php 
-header( 'Content-type: text/html; charset=utf-8' );
+header( "Content-type: text/html; charset=utf-8" );
 include("connection.php");
 $message = "";
 
@@ -7,7 +7,7 @@ $message = "";
 $username = $_POST["username"];
 $password = addcslashes(md5($_POST["password"])) ;
 $status = 1;
-date_default_timezone_set('America/Mexico_City');
+date_default_timezone_set("America/Mexico_City");
 $dateRegistered = date("F j, Y, g:i a");
 
 /*Verifico que no exista el usuario*/
@@ -25,7 +25,7 @@ if(mysql_num_rows($existe) > 0){
 					<button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
 					Usuario registrado. Inicia sesión
 				</div>";
-	header("Location: ../registry.php"); 
+				
 }
 
 
