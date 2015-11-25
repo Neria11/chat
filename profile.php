@@ -17,7 +17,6 @@ include("models/security/control_sesion.php");
   <script type="text/javascript" src="js/controllers/main.js"></script>
   <script type="text/javascript">
     $(document).ready(function() {
-     startSearchPeriod();
       $.ajaxSetup({"cache":false});
       /*setInterval("loadOldMessages()", 500);*/
     });
