@@ -1,5 +1,6 @@
 <?php
 include("models/security/control_sesion.php");
+include("models/view_profile.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,12 +17,12 @@ include("models/security/control_sesion.php");
   <script type="text/javascript" src="js/jQuery.js"></script>
   <script type="text/javascript" src="js/controllers/main.js"></script>
   <script type="text/javascript">
-    $(document).ready(function() {
-      updateProfile();
-      $.ajaxSetup({"cache":false});
-      /*setInterval("loadOldMessages()", 500);*/
-    });
-    </script>
+  $(document).ready(function() {
+    updateProfile();
+    $.ajaxSetup({"cache":false});
+    /*setInterval("loadOldMessages()", 500);*/
+  });
+  </script>
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -47,7 +48,7 @@ include("models/security/control_sesion.php");
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-    
+        <li><img src="<?php echo $avatar ?>" alt="" class="img-responsive" style="max-width:40px; max-height:40px;"></li>
         <li> <a href="models/security/logout.php" class="">Cerrar sesión</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
@@ -75,14 +76,14 @@ include("models/security/control_sesion.php");
       <!-- Default panel contents -->
       <div class="panel-heading">Mi perfil</div>
       <div class="panel-body">
-       <form method="post" action="" name="formProfile" id="formProfile">
+       <form name="formProfile" method="POST" action="" id="formProfile">
         <div class="form-group">
           <label for="nombre">Nombre:</label>
-          <input type="email" name="nombre" class="form-control " id="nombre" placeholder="">
+          <input type="text" name="nombre" class="form-control " id="nombre" placeholder="" value="<?php echo $nombre ?>">
         </div>
         <div class="form-group">
           <label for="apellido">Apellido (s):</label>
-          <input type="text" name="apellido" class="form-control " id="apellido" placeholder="">
+          <input type="text" name="apellido" class="form-control " id="apellido" placeholder="" value="<?php echo $apellido ?>">
         </div>
         <div class="form-group">
           <label for="username">Username:</label>
@@ -90,72 +91,87 @@ include("models/security/control_sesion.php");
         </div>
         <div class="form-group">
           <label for="email">Correo electrónico:</label>
-          <input type="email" name="email" class="form-control " id="email" placeholder="">
+          <input type="email" name="email" class="form-control " id="email" placeholder="" value="<?php echo $email ?>">
         </div>
         <div class="form-group">
           <label for="slogan">Eslogan: </label>
-          <textarea class="form-control" name="slogan" id="slogan" rows="3"></textarea>
-        </div>
-        <div class="form-group">
-          <label for="exampleInputFile">Foto:</label>
-          <input type="file" name="avatar" id="avatar" >
+          <textarea class="form-control" name="slogan" id="slogan" rows="3"><?php echo $slogan ?></textarea>
         </div>
         <div class="form-groop">
-          <button type="button" class="btn btn-primary btn-md" id="sendProfile">Guardar cambios</button>
+          <button type="button" class="btn btn-primary btn-md" id="sendProfile">Actualizar datos</button>
         </div>
       </form>
     </div>
   </div>
 
-  <div class="panel panel-success">
-    <!-- Default panel contents -->
-    <div class="panel-heading">Seguridad:</div>
-    <div class="panel-body">
-     <form method="post" action="">
-      <div class="form-group">
-        <label for="proyecto">Contraseña actual:</label>
-        <input type="password" name="" class="form-control " id="" readonly="" value="********">
-      </div>
-      <div class="form-group">
-        <label for="titulo">Nueva contraseña:</label>
-        <input type="password" name="newPassword" class="form-control " id="newPassword" placeholder="">
-      </div>
-      <div class="form-group">
-        <label for="titulo">Cofirmar nueva contraseña:</label>
-        <input type="password" name="confirmNewPassword" class="form-control " id="confirmNewPassword" placeholder="">
-      </div>
-      <div class="form-groop">
-        <button type="button" class="btn btn-success btn-md" data-toggle="modal" data-target=".bs-example-modal-sm">Actualizar Contraseña</button>
-      </div>
-    </form>
+  <div class="row">
 
-    <!--Modal-->
-    <div class="modal fade bs-example-modal-sm" role="dialog" aria-labelledby="gridSystemModalLabel">
-      <div class="modal-dialog" role="document">
-        <form method="post" action="">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title" id="gridSystemModalLabel">Verificación: </h4>
-            </div>
-            <div class="modal-body">
-              <div class="form-group">
-                <label for="titulo">Confirmar contraseña anterior:</label>
-                <input type="password" name="confirmNewPassword" class="form-control " id="confirmNewPassword" placeholder="">
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-              <button type="button" class="btn btn-primary">Actualizar contraseña</button>
-            </div>
-          </div><!-- /.modal-content -->
+    <div class="col-sm-12 col-md-6 col-lg-6">
+      <div class="panel panel-info">
+        <div class="panel-heading">Foto de perfil</div>
+        <div class="panel-body">
+         <form name="" method="POST" action="models/change_avatar.php" enctype="multipart/form-data" id="">
+          <div class="form-group">
+            <label for="avatar">Foto:</label>
+            <img src="<?php echo $avatar ?>" alt="" class="img-responsive" style="background:#c4c4c4; max-width:90px; max-height:90px;">
+            <input type="file" name="avatar" id="avatar" required="">
+            <input type="hidden" name="username" value="<?php echo "$_SESSION[username]"?>">
+          </div>
+          <div class="form-groop">
+            <button type="submit" class="btn btn-primary btn-md" id="">Actualizar foto</button>
+            <a href="models/delete_avatar.php?username=<?php echo "$_SESSION[username]"?>" class="btn btn-danger btn-md" id="">Borrar foto</a>
+          </div>
         </form>
-      </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-
-    <!--Modal-->
-
+      </div>
+    </div>
   </div>
+
+  <div class="col-sm-12 col-md-6 col-lg-6">
+    <div class="panel panel-success">
+      <!-- Default panel contents -->
+      <div class="panel-heading">Seguridad:</div>
+      <div class="panel-body">
+       <form method="post" action="">
+        <div class="form-group">
+          <label for="titulo">Nueva contraseña:</label>
+          <input type="password" name="newPassword" class="form-control " id="newPassword" placeholder="">
+        </div>
+        <div class="form-group">
+          <label for="titulo">Cofirmar nueva contraseña:</label>
+          <input type="password" name="confirmNewPassword" class="form-control " id="confirmNewPassword" placeholder="">
+        </div>
+        <div class="form-groop">
+          <button type="button" class="btn btn-success btn-md" data-toggle="modal" data-target=".bs-example-modal-sm">Actualizar Contraseña</button>
+        </div>
+      </form>
+
+      <!--Modal-->
+      <div class="modal fade bs-example-modal-sm" role="dialog" aria-labelledby="gridSystemModalLabel">
+        <div class="modal-dialog" role="document">
+          <form method="post" action="">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="gridSystemModalLabel">Verificación: </h4>
+              </div>
+              <div class="modal-body">
+                <div class="form-group">
+                  <label for="titulo">Confirmar contraseña anterior:</label>
+                  <input type="password" name="confirmNewPassword" class="form-control " id="confirmNewPassword" placeholder="">
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary">Actualizar contraseña</button>
+              </div>
+            </div><!-- /.modal-content -->
+          </form>
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+      <!--Modal-->
+    </div>
+  </div>
+</div>
 </div>
 
 </div>

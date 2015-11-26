@@ -20,7 +20,7 @@ var updateProfile = function(){
 		alert(formProfile);
 		$.ajax({
 			type:"POST",
-			url:"models/save_profile.php",
+			url:"models/update_profile.php",
 			data: formProfile
 		}).done(function(info){
 			alert("Datos actualizados." + info);
