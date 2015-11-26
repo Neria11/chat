@@ -9,7 +9,11 @@ $slogan = $_POST["slogan"];
 $username = $_POST["username"];
 
 $data_sql = "UPDATE usuarios 
-		SET nombre = '".$nombre."', apellido = '".$apellido."', email = '".$email."', slogan = '".$slogan."'";
+		SET nombre = '".$nombre."', 
+		apellido = '".$apellido."', 
+		email = '".$email."', 
+		slogan = '".$slogan."' 
+		where username = '".$username."'";
 mysql_query($data_sql);
 
 echo "<div class='alert alert-success' role='alert'>

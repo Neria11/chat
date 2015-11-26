@@ -7,7 +7,8 @@ var registerNewUser = function(){
 			url:"models/create_user.php",
 			data: registryNewUserAccount
 		}).done(function(info){
-			alert("Datos insertados.");
+			$("#mensaje").show(300);
+			$("#mensaje").html(info);
 		})
 	});
 }

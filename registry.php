@@ -13,13 +13,13 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <script type="text/javascript" src="js/jQuery.js"></script>
   <script type="text/javascript" src="js/controllers/main.js"></script>
-  <!--<script type="text/javascript">
+  <script type="text/javascript">
   $(document).ready(function() {
     registerNewUser();
     $.ajaxSetup({"cache":false});
     /*setInterval("loadOldMessages()", 500);*/
   });
-  </script>-->
+  </script>
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -60,7 +60,8 @@
 <div class="container">
   <div class="row">
    <div class="col-md-4 col-md-offset-4">
-    <form method="post" action="" class="" name="registryNewUserAccount">
+   <div class="form-group" id="mensaje" style="display:none;"></div>
+    <form method="post" action="" class="" name="registryNewUserAccount" id="registryNewUserAccount">
       <h1>Registro</h1>
       <div class="form-group">
         <label for="username">Usuario: </label>

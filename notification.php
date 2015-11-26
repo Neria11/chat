@@ -64,25 +64,25 @@ include("models/view_profile.php");
 				</div>
 			</div>
 			<div class="col-md-8">
-				<div class="panel panel-info">
+				<div class="panel panel-success">
 					<!-- Default panel contents -->
 					<div class="panel-heading">Notificaciones</div>
 					<div class="panel-body">
 						
 						<div class="list-group">
-							<a href="#" class="list-group-item active">
+							<a href="#" class="list-group-item">
 								<h4 class="list-group-item-heading">List group item heading</h4>
 								<p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
 							</a>
 						</div>
 						<div class="list-group">
-							<a href="#" class="list-group-item active">
+							<a href="#" class="list-group-item">
 								<h4 class="list-group-item-heading">List group item heading</h4>
 								<p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
 							</a>
 						</div>
 						<div class="list-group">
-							<a href="#" class="list-group-item active">
+							<a href="#" class="list-group-item ">
 								<h4 class="list-group-item-heading">List group item heading</h4>
 								<p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
 							</a>
