@@ -17,13 +17,13 @@ var registerNewUser = function(){
 var updateProfile = function(){
 	$("#sendProfile").click(function(){
 		var formProfile = $("#formProfile").serialize();
-		alert(formProfile);
 		$.ajax({
 			type:"POST",
 			url:"models/update_profile.php",
 			data: formProfile
 		}).done(function(info){
-			alert("Datos actualizados." + info);
+			$("#mensaje").show(300);
+			$("#mensaje").html(info);
 		})
 	});
 }

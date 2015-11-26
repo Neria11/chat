@@ -48,7 +48,7 @@ include("models/view_profile.php");
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><img src="<?php echo $avatar ?>" alt="" class="img-responsive" style="max-width:40px; max-height:40px;"></li>
+        <li> <a href="#" class=""><span class="label label-info">@<?php echo "$_SESSION[username]"; ?> </span></a></li>
         <li> <a href="models/security/logout.php" class="">Cerrar sesión</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
@@ -76,6 +76,7 @@ include("models/view_profile.php");
       <!-- Default panel contents -->
       <div class="panel-heading">Mi perfil</div>
       <div class="panel-body">
+       <div class="form-group" id="mensaje" style="display:none;"></div>
        <form name="formProfile" method="POST" action="" id="formProfile">
         <div class="form-group">
           <label for="nombre">Nombre:</label>
@@ -87,7 +88,7 @@ include("models/view_profile.php");
         </div>
         <div class="form-group">
           <label for="username">Username:</label>
-          <input type="text" name="username" class="form-control " id="username" readonly="" value="<?php echo "$_SESSION[username]"?>">
+          <input type="text" name="username" class="form-control " id="username" readonly="" value="@<?php echo "$_SESSION[username]"?>">
         </div>
         <div class="form-group">
           <label for="email">Correo electrónico:</label>

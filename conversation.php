@@ -38,7 +38,7 @@ include("models/security/control_sesion.php");
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-    
+        <li> <a href="#" class=""><span class="label label-info">@<?php echo "$_SESSION[username]"; ?> </span></a></li>
         <li> <a href="models/security/logout.php" class="">Cerrar sesión</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
