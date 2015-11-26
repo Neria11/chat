@@ -96,7 +96,7 @@ include("models/view_profile.php");
         </div>
         <div class="form-group">
           <label for="slogan">Eslogan: </label>
-          <textarea class="form-control" name="slogan" id="slogan" rows="3"><?php echo $slogan ?></textarea>
+          <textarea class="form-control" name="slogan" id="slogan" rows="3" style="resize:none;"><?php echo $slogan ?></textarea>
         </div>
         <div class="form-groop">
           <button type="button" class="btn btn-primary btn-md" id="sendProfile">Actualizar datos</button>
@@ -108,7 +108,7 @@ include("models/view_profile.php");
   <div class="row">
 
     <div class="col-sm-12 col-md-6 col-lg-6">
-      <div class="panel panel-info">
+      <div class="panel panel-danger">
         <div class="panel-heading">Foto de perfil</div>
         <div class="panel-body">
          <form name="" method="POST" action="models/change_avatar.php" enctype="multipart/form-data" id="">
@@ -128,7 +128,7 @@ include("models/view_profile.php");
   </div>
 
   <div class="col-sm-12 col-md-6 col-lg-6">
-    <div class="panel panel-success">
+    <div class="panel panel-danger">
       <!-- Default panel contents -->
       <div class="panel-heading">Seguridad:</div>
       <div class="panel-body">

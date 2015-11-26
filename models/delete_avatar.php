@@ -5,9 +5,9 @@ include("connection.php");
 $username = $_REQUEST["username"];
 
 //Ruta donde se encuentra el archivo
-$final_path = "../img/users/".$username . "/";
-
+$final_path = "../img/users/".$username;
 unlink($final_path);
-header("Lacation: ../profile.php");
+mysql_query("DELETE avatar from usuarios where username = '".$username."'");
 
+header("Location: ../profile.php");
 ?>

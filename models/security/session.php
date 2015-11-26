@@ -54,8 +54,10 @@ if(count($_POST) > 0) {
 					$newLogin  = $numLogin + 1;
 
 					//Actualizamos las variables del ultimo logueo, incrementamos un login mas
-					mysql_query("UPDATE usuarios set lastLogin = '".$lastLogin."', numLogin = '".$newLogin."'
-						WHERE username ='".$username."'");
+					mysql_query("UPDATE usuarios 
+							     SET lastLogin = '".$lastLogin."', 
+								 numLogin = '".$newLogin."'
+								 WHERE username ='".$username."'");
 
 					//Verificamos si la sesion existe y redireccionamos a pagina principal
 					if(isset($_SESSION["intervalo"])) {
