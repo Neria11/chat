@@ -61,11 +61,11 @@ include("models/security/session.php");
       
       <div class="form-group">
         <label for="username">Usuario: </label>
-        <input type="text" name="username" class="form-control" id="username" placeholder="Usuario" required="" autocomplete="off">
+        <input type="text" name="username" class="form-control" id="username" placeholder="" required="" autocomplete="off">
       </div>
       <div class="form-group">
         <label for="password">Contraseña: </label>
-        <input type="password" name="password" class="form-control" id="password" placeholder="Password" required="">
+        <input type="password" name="password" class="form-control" id="password" placeholder="" required="">
       </div>
       <div class="form-group">
         <button type="submit" class="btn btn-primary btn-md btn-block">Ingresar</button>

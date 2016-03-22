@@ -1,5 +1,6 @@
 <?php
 include("models/security/control_sesion.php");
+include("models/view_profile.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -69,7 +70,7 @@ include("models/security/control_sesion.php");
           <!--Amigo-->
           <div class="col-sm-6 col-md-4 col-lg-3">
            <div class="text-center ">
-            <img src="img/noavatar.png" alt="" class="img-circle img-responsive">
+            <img src="<?php echo $avatar ?>" alt="" class="img-circle img-responsive">
             <h4>Sabino</h4>
             <p>"La vida es bella"</p>
             <p><a class="btn btn-success btn-xs" href="#" role="button"><span class="glyphicon glyphicon-comment"></span> Chat</a></p>
@@ -79,7 +80,7 @@ include("models/security/control_sesion.php");
         <!--Amigo-->
         <div class="col-sm-6 col-md-4 col-lg-3">
          <div class="text-center">
-          <img src="img/noavatar.png" alt="" class="img-circle img-responsive">
+          <img src="<?php echo $avatar ?>" alt="" class="img-circle img-responsive">
           <h4>Sabino</h4>
           <p>"La vida es bella"</p>
           <p><a class="btn btn-success btn-xs" href="#" role="button"><span class="glyphicon glyphicon-comment"></span> Chat</a></p>
@@ -89,7 +90,7 @@ include("models/security/control_sesion.php");
       <!--Amigo-->
       <div class="col-sm-6 col-md-4 col-lg-3">
        <div class="text-center">
-        <img src="img/noavatar.png" alt="" class="img-circle img-responsive">
+        <img src="<?php echo $avatar ?>" alt="" class="img-circle img-responsive">
         <h4>Sabino</h4>
         <p>"La vida es bella"</p>
         <p><a class="btn btn-success btn-xs" href="#" role="button"><span class="glyphicon glyphicon-comment"></span> Chat</a></p>
@@ -112,7 +113,7 @@ include("models/security/control_sesion.php");
       <!--Amigo-->
       <div class="col-sm-6 col-md-4 col-lg-2">
        <div class="text-center">
-        <img src="img/noavatar.png" alt="" class="img-responsive">
+        <img src="<?php echo $avatar ?>" alt="" class="img-responsive">
         <h4>Sabino</h4>
         <p>
           <small>"La vida es bella"</small>
@@ -124,7 +125,7 @@ include("models/security/control_sesion.php");
     <!--Amigo-->
     <div class="col-sm-6 col-md-4 col-lg-2">
      <div class="text-center">
-      <img src="img/noavatar.png" alt="" class="img-responsive">
+      <img src="<?php echo $avatar ?>" alt="" class="img-responsive">
       <h4>Sabino</h4>
       <p>
         <small>"La vida es bella"</small>
@@ -136,7 +137,7 @@ include("models/security/control_sesion.php");
   <!--Amigo-->
   <div class="col-sm-6 col-md-4 col-lg-2">
    <div class="text-center">
-    <img src="img/noavatar.png" alt="" class="img-responsive">
+    <img src="<?php echo $avatar ?>" alt="" class="img-responsive">
     <h4>Sabino</h4>
     <p>
       <small>"La vida es bella"</small>
@@ -148,7 +149,7 @@ include("models/security/control_sesion.php");
 <!--Amigo-->
 <div class="col-sm-6 col-md-4 col-lg-2">
  <div class="text-center">
-  <img src="img/noavatar.png" alt="" class="img-responsive">
+  <img src="<?php echo $avatar ?>" alt="" class="img-responsive">
   <h4>Sabino</h4>
   <p>
     <small>"La vida es bella"</small>
@@ -160,7 +161,7 @@ include("models/security/control_sesion.php");
 <!--Amigo-->
 <div class="col-sm-6 col-md-4 col-lg-2">
  <div class="text-center">
-  <img src="img/noavatar.png" alt="" class="img-responsive">
+  <img src="<?php echo $avatar ?>" alt="" class="img-responsive">
   <h4>Sabino</h4>
   <p>
     <small>"La vida es bella"</small>
@@ -172,7 +173,7 @@ include("models/security/control_sesion.php");
 <!--Amigo-->
 <div class="col-sm-6 col-md-4 col-lg-2">
  <div class="text-center">
-  <img src="img/noavatar.png" alt="" class="img-responsive">
+  <img src="<?php echo $avatar ?>" alt="" class="img-responsive">
   <h4>Sabino</h4>
   <p>
     <small>"La vida es bella"</small>

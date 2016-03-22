@@ -1,11 +1,12 @@
 <?php
-include("models/connection.php");
 
 //Variable que retorna un mensaje
 $message = "";
 
 //Verificamos que exista al menos una petición de POST
 if(count($_POST) > 0) {
+	include("models/connection.php");
+
 	//Obtenemos el username por método POST
 	$username = addslashes($_POST["username"]);
 
